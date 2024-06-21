@@ -1,0 +1,1342 @@
+2024-06-20 01:05:14 Error: [Error] Unknown named parameter $subject
+Request URL: /
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Event/CakeEventManager.php(244): ObjectCollection->trigger('initialize')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(682): CakeEventManager->dispatch(Object(CakeEvent))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(115): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 01:05:14 Error: Fatal Error (1): Uncaught Error: Unknown named parameter $subject in /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Utility/ObjectCollection.php:129
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Event/CakeEventManager.php(244): ObjectCollection->trigger('initialize')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(682): CakeEventManager->dispatch(Object(CakeEvent))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Error/ExceptionRenderer.php(158): Controller->startupProcess()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Error/ExceptionRenderer.php(95): ExceptionRenderer->_getController(Object(Error))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Error/ErrorHandler.php(126): ExceptionRenderer->__construct(Object(Error))
+#5 [internal function]: ErrorHandler::handleException(Object(Error))
+#6 {main}
+  thrown in [/Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Utility/ObjectCollection.php, line 129]
+2024-06-20 01:05:14 Error: [FatalErrorException] Uncaught Error: Unknown named parameter $subject in /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Utility/ObjectCollection.php:129
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Event/CakeEventManager.php(244): ObjectCollection->trigger('initialize')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(682): CakeEventManager->dispatch(Object(CakeEvent))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Error/ExceptionRenderer.php(158): Controller->startupProcess()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Error/ExceptionRenderer.php(95): ExceptionRenderer->_getController(Object(Error))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Error/ErrorHandler.php(126): ExceptionRenderer->__construct(Object(Error))
+#5 [internal function]: ErrorHandler::handleException(Object(Error))
+#6 {main}
+  thrown
+Request URL: /
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', '/Applications/X...', 129)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Core/App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', '/Applications/X...', 129, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2024-06-20 05:01:00 Error: [MissingHelperException] Helper class UrlHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UrlHelper',
+  'plugin' => false,
+)
+Request URL: /
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Url')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(858): HelperCollection->__isset('Url')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Pages/home.ctp(18): View->__get('Url')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('home', NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/PagesController.php(72): Controller->render('home')
+#8 [internal function]: PagesController->display('home')
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#12 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#14 {main}
+2024-06-20 05:03:45 Error: [MissingHelperException] Helper class UrlHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UrlHelper',
+  'plugin' => false,
+)
+Request URL: /
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Url')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(858): HelperCollection->__isset('Url')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Pages/home.ctp(18): View->__get('Url')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('home', NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/PagesController.php(72): Controller->render('home')
+#8 [internal function]: PagesController->display('home')
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#12 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#14 {main}
+2024-06-20 05:05:29 Error: [MissingViewException] View file "Pages/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/login.ctp',
+)
+Request URL: /login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Pages/login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 05:11:16 Error: [MissingViewException] View file "Pages/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/login.ctp',
+)
+Request URL: /login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Pages/login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 05:11:23 Error: [MissingViewException] View file "Pages/register.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/register.ctp',
+)
+Request URL: /register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Pages/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 08:13:41 Error: [MissingViewException] View file "Users/registered.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/registered.ctp',
+)
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Users/registere...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('registered', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('registered')
+#3 [internal function]: UsersController->usersave()
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#9 {main}
+2024-06-20 08:14:39 Error: [MissingViewException] View file "Users/registered.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/registered.ctp',
+)
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Users/registere...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('registered', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('registered')
+#3 [internal function]: UsersController->usersave()
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#9 {main}
+2024-06-20 08:14:52 Error: [MissingViewException] View file "Users/registered.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/registered.ctp',
+)
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Users/registere...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('registered', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('registered')
+#3 [internal function]: UsersController->usersave()
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#9 {main}
+2024-06-20 08:15:07 Error: [MissingViewException] View file "Users/registered.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/registered.ctp',
+)
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Users/registere...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('registered', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('registered')
+#3 [internal function]: UsersController->usersave()
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#9 {main}
+2024-06-20 08:16:06 Error: [MissingLayoutException] Layout file "Layouts/layout.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Layouts/layout.ctp',
+)
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(514): View->_getLayoutFileName('layout')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(481): View->renderLayout('', 'layout')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('registered', 'layout')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('registered')
+#4 [internal function]: UsersController->usersave()
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#10 {main}
+2024-06-20 08:26:17 Error: [Error] Call to a member function fetch() on null
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(546): View->_render('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(481): View->renderLayout('\n    <div class...', 'new_layout')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', 'new_layout')
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 08:26:17 Error: [Error] Call to a member function fetch() on null
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(546): View->_render('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(481): View->renderLayout('\n    <div class...', 'new_layout')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', 'new_layout')
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 08:26:18 Error: [Error] Call to a member function fetch() on null
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(546): View->_render('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(481): View->renderLayout('\n    <div class...', 'new_layout')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', 'new_layout')
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 08:47:59 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /users/storeusers
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(3686): Model->setSource('users')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1260): Model->schema()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1219): Model->_setAliasData(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(18): Model->set(Array)
+#5 [internal function]: UsersController->storeusers()
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#11 {main}
+2024-06-20 08:50:22 Error: [Error] Call to a member function set() on null
+Request URL: /users/storeusers
+Stack Trace:
+#0 [internal function]: UsersController->storeusers()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 08:50:41 Error: [Error] Call to a member function set() on null
+Request URL: /users/storeusers
+Stack Trace:
+#0 [internal function]: UsersController->storeusers()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 08:51:04 Error: [Error] Call to a member function set() on null
+Request URL: /users/storeusers
+Stack Trace:
+#0 [internal function]: UsersController->storeusers()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 08:52:54 Error: [ParseError] syntax error, unexpected 'public' (T_PUBLIC), expecting end of file
+Request URL: /users/storeusers
+Stack Trace:
+#0 [internal function]: App::load('UsersController')
+#1 [internal function]: spl_autoload_call('UsersController')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(266): class_exists('UsersController')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
+2024-06-20 08:53:07 Error: [Error] Call to a member function set() on null
+Request URL: /users/storeusers
+Stack Trace:
+#0 [internal function]: UsersController->storeusers()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 08:53:08 Error: [Error] Call to a member function set() on null
+Request URL: /users/storeusers
+Stack Trace:
+#0 [internal function]: UsersController->storeusers()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 08:54:55 Error: [MissingViewException] View file "Users/storeusers.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/storeusers.ctp',
+)
+Request URL: /users/storeusers
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Users/storeuser...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 08:55:22 Error: [MissingViewException] View file "Users/storeusers.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/storeusers.ctp',
+)
+Request URL: /users/storeusers
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Users/storeuser...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 08:55:24 Error: [MissingViewException] View file "Users/storeusers.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/storeusers.ctp',
+)
+Request URL: /users/storeusers
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Users/storeuser...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 08:58:46 Error: [Error] Class 'User' not found
+Request URL: /users/storeusers
+Stack Trace:
+#0 [internal function]: UsersController->storeusers()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 08:58:54 Error: [Error] Class 'User' not found
+Request URL: /users/storeusers
+Stack Trace:
+#0 [internal function]: UsersController->storeusers()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 08:58:54 Error: [Error] Class 'User' not found
+Request URL: /users/storeusers
+Stack Trace:
+#0 [internal function]: UsersController->storeusers()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 08:59:19 Error: [MissingViewException] View file "Pages/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/login.ctp',
+)
+Request URL: /login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Pages/login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 08:59:32 Error: [Error] Class 'UserDb' not found
+Request URL: /users/storeusers
+Stack Trace:
+#0 [internal function]: UsersController->storeusers()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 09:00:55 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'name' doesn't have a default value
+Request URL: /users/storeusers
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `fo...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `fo...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1942): DboSource->create(Object(UserDb), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(35): Model->save(Array)
+#6 [internal function]: UsersController->storeusers()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:01:22 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'date_updated' doesn't have a default value
+Request URL: /users/storeusers
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `fo...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `fo...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1942): DboSource->create(Object(UserDb), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(35): Model->save(Array)
+#6 [internal function]: UsersController->storeusers()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:04:17 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'date_updated' doesn't have a default value
+Request URL: /users/storeusers
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `fo...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `fo...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1942): DboSource->create(Object(UserDb), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(36): Model->save(Array)
+#6 [internal function]: UsersController->storeusers()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:05:14 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /users
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(3686): Model->setSource('users')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1490): Model->schema()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1477): Model->hasField('title', false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(914): Model->hasField(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(130): Model->__get('displayField')
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:07:35 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /users
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(3686): Model->setSource('users')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1490): Model->schema()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1477): Model->hasField('title', false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(914): Model->hasField(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(130): Model->__get('displayField')
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:10:05 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /users
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(3686): Model->setSource('users')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1490): Model->schema()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1477): Model->hasField('title', false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(914): Model->hasField(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(130): Model->__get('displayField')
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:13:47 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /users
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(3686): Model->setSource('users')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1490): Model->schema()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1477): Model->hasField('title', false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(914): Model->hasField(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(130): Model->__get('displayField')
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:23:20 Error: [PDOException] SQLSTATE[01000]: Warning: 1265 Data truncated for column 'date_created' at row 1
+Request URL: /users/storeusers
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `fo...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `fo...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1942): DboSource->create(Object(User), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(35): Model->save(Array)
+#6 [internal function]: UsersController->storeusers()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:28:30 Error: [MissingViewException] View file "Users/storeusers.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/storeusers.ctp',
+)
+Request URL: /users/storeusers
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Users/storeuser...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 09:31:57 Error: [MissingViewException] View file "Users/storeusers.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/storeusers.ctp',
+)
+Request URL: /users/storeusers
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Users/storeuser...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 09:34:03 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(12): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:34:03 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(12): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:34:04 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(12): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:34:08 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(12): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:34:11 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(12): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:34:29 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(12): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:34:45 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(12): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:34:46 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(12): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:35:10 Error: [MissingViewException] View file "Users/storeusers.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/storeusers.ctp',
+)
+Request URL: /users/storeusers
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Users/storeuser...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 09:37:26 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(14): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:38:28 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(14): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:39:04 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(14): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:39:04 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(14): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:39:07 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(14): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:39:29 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(14): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 09:39:31 Error: [CakeException] Method getData does not exist
+Request URL: /Users/usersave
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/View/Users/register.ctp(14): CakeRequest->__call('getData', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('register', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(12): Controller->render('register')
+#6 [internal function]: UsersController->usersave()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 10:37:19 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
+2024-06-20 10:38:01 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
+2024-06-20 10:41:45 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
+2024-06-20 10:43:24 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
+2024-06-20 10:44:14 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
+2024-06-20 10:56:10 Error: [MissingViewException] View file "Users/thankyou.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/thankyou.ctp',
+)
+Request URL: /users/thankyou
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Users/thankyou')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('thankyou', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(57): Controller->render('thankyou')
+#3 [internal function]: UsersController->thankyou()
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#9 {main}
+2024-06-20 10:57:57 Error: [MissingViewException] View file "Pages/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/login.ctp',
+)
+Request URL: /login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Pages/login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 11:08:01 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /message/thankyou
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#2 {main}
+2024-06-20 11:08:37 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /message/thankyou
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#2 {main}
+2024-06-20 11:08:38 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /message/thankyou
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#2 {main}
+2024-06-20 11:08:38 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /message/thankyou
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#2 {main}
+2024-06-20 11:08:55 Error: [MissingTableException] Table messages for model Message was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'messages',
+  'class' => 'Message',
+  'ds' => 'default',
+)
+Request URL: /messages/thankyou
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(3686): Model->setSource('messages')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1490): Model->schema()
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1477): Model->hasField('title', false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(914): Model->hasField(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(130): Model->__get('displayField')
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(MessagesController), Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 11:15:36 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
+2024-06-20 11:16:03 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
+2024-06-20 11:16:03 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
+2024-06-20 11:16:17 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
+2024-06-20 11:31:33 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'name' doesn't have a default value
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `fo...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `fo...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1942): DboSource->create(Object(User), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(20): Model->save(Array)
+#6 [internal function]: UsersController->register()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-20 11:45:40 Error: [Error] Class 'AuthComponent' not found
+Request URL: /users/register
+Stack Trace:
+#0 [internal function]: UsersController->register()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 11:47:07 Error: [Error] Class 'Security' not found
+Request URL: /users/register
+Stack Trace:
+#0 [internal function]: UsersController->register()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 11:47:10 Error: [Error] Class 'Security' not found
+Request URL: /users/register
+Stack Trace:
+#0 [internal function]: UsersController->register()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-20 11:53:05 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
+2024-06-21 02:53:56 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Connection refused',
+  'enabled' => true,
+)
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(278): Mysql->connect()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(3659): ConnectionManager::getDataSource('default')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1162): Model->setDataSource('default')
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(3686): Model->setSource('users')
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1260): Model->schema()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1219): Model->_setAliasData(Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(17): Model->set(Array)
+#9 [internal function]: UsersController->register()
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#13 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#15 {main}
+2024-06-21 04:00:38 Error: [PDOException] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'password' at row 1
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `fo...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `fo...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1942): DboSource->create(Object(User), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(20): Model->save(Array)
+#6 [internal function]: UsersController->register()
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#12 {main}
+2024-06-21 04:17:22 Error: [MissingViewException] View file "Pages/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/login.ctp',
+)
+Request URL: /login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/View/View.php(470): View->_getViewFileName('Pages/login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(968): View->render('login', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/PagesController.php(95): Controller->render('login')
+#3 [internal function]: PagesController->login()
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#9 {main}
+2024-06-21 05:27:33 Error: [Error] Call to a member function login() on null
+Request URL: /users/login
+Stack Trace:
+#0 [internal function]: UsersController->login()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-21 05:28:32 Error: [Error] Call to a member function login() on null
+Request URL: /users/login
+Stack Trace:
+#0 [internal function]: UsersController->login()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-21 05:30:00 Error: [Error] Call to a member function login() on null
+Request URL: /users/login
+Stack Trace:
+#0 [internal function]: UsersController->login()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-21 05:30:22 Error: [Error] Call to a member function login() on null
+Request URL: /users/login
+Stack Trace:
+#0 [internal function]: UsersController->login()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-21 05:31:10 Error: [Error] Call to a member function login() on null
+Request URL: /users/login
+Stack Trace:
+#0 [internal function]: UsersController->login()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-21 05:31:18 Error: [Error] Call to a member function login() on null
+Request URL: /users/login
+Stack Trace:
+#0 [internal function]: UsersController->login()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-21 05:31:38 Error: [Error] Call to a member function login() on null
+Request URL: /users/login
+Stack Trace:
+#0 [internal function]: UsersController->login()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-21 05:31:46 Error: [Error] Call to a member function login() on null
+Request URL: /users/login
+Stack Trace:
+#0 [internal function]: UsersController->login()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-21 05:32:28 Error: [Error] Call to a member function login() on null
+Request URL: /users/login
+Stack Trace:
+#0 [internal function]: UsersController->login()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-21 05:32:44 Error: [Error] Call to a member function login() on null
+Request URL: /users/login
+Stack Trace:
+#0 [internal function]: UsersController->login()
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#6 {main}
+2024-06-21 07:32:29 Error: [ParseError] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /users/login
+Stack Trace:
+#0 [internal function]: App::load('UsersController')
+#1 [internal function]: spl_autoload_call('UsersController')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(266): class_exists('UsersController')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
+2024-06-21 08:00:51 Error: [Error] Class 'SimplePasswordHasher' not found
+Request URL: /users/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Event/CakeEventManager.php(242): User->beforeSave(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1873): CakeEventManager->dispatch(Object(CakeEvent))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/Controller/UsersController.php(82): Model->save(Array)
+#4 [internal function]: UsersController->register()
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#10 {main}
+2024-06-21 08:06:24 Error: [MissingActionException] Action UsersController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'users',
+)
+Request URL: /users/users/login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(544): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Controller/Controller.php(503): Controller->_getScaffold(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
+2024-06-21 08:21:57 Error: [ParseError] syntax error, unexpected 'if' (T_IF), expecting ';' or ','
+Request URL: /users/login
+Stack Trace:
+#0 [internal function]: App::load('UsersController')
+#1 [internal function]: spl_autoload_call('UsersController')
+#2 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(266): class_exists('UsersController')
+#3 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 /Applications/XAMPP/xamppfiles/htdocs/forty_activity/index.php(41): require('/Applications/X...')
+#7 {main}
