@@ -19,7 +19,7 @@ public $useTable = 'users';
                 'rule' => array('notBlank'),
                 'message' => 'Name cannot be blank',
                 //'allowEmpty' => false,
-                //'required' => false,
+                'required' => false,
                 //'last' => false, // Stop validation after this rule
                 //'on' => 'create', // Limit validation to 'create' or 'update' operations
             ),

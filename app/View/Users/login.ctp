@@ -6,6 +6,13 @@
                     <h3 class="panel-title">Log In</h3>
                 </div>
                 <div class="panel-body">
+                    <?php
+                       echo '<div id="validation-messages" class="alert alert-danger">';
+                       echo '<ul>'; 
+                    echo $this->Session->flash('auth'); 
+                    echo '</ul>';
+                    echo '</div>';
+                    ?>
                     <?php echo $this->Form->create('User', array('role' => 'form', 'class' => 'form-horizontal')); ?>
                         <div class="form-group">
                             <?php echo $this->Form->input('email', array(
@@ -26,7 +33,7 @@
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
                                 <button type="submit" class="btn btn-primary">Login</button>
-                                <a href="<?php echo $this->Html->url(array('controller' => 'pages', 'action' => '/')); ?>" class="btn btn-secondary">Back</a>
+                                <a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'register')); ?>" class="btn btn-secondary">Register</a>
                             </div>
                         </div>
                     <?php echo $this->Form->end(); ?>

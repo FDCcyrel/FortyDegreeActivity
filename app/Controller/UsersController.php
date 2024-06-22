@@ -7,103 +7,61 @@ App::uses('AuthComponent', 'Controller/Component');
 class UsersController extends AppController {
     public $uses = array('User');
 	public $layout = 'new_layout';
-    public $components = array(
-        'Auth' => array(
-            'loginAction' => array(
-                'controller' => 'users',
-                'action' => 'login'
-            ),
-            'authenticate' => array(
-                'Form' => array(
-                    'userModel' => 'User',
-                    'fields' => array('username' => 'email', 'password' => 'password')
-                )
-            ),
-            'loginRedirect' => array('controller' => 'users', 'action' => 'dashboard'), // Example redirect after login
-            'logoutRedirect' => array('controller' => 'users', 'action' => 'login') // Example redirect after logout
-        )
-    );
-    public function beforeFilter() {
-        parent::beforeFilter();
-        $this->Auth->allow('usersave', 'register','thankyou');
-    }
-	public function usersave()
-	{
-		$this->render('register');
-	}
-    public function loginview()
+    
+
+    public function first()
     {
-        $this->render('login');
+        $this->render('dashboard');
     }
-   // Example to debug password hashing and comparison
-   public function login() {
-    if ($this->request->is('post')) {
-        $email = $this->request->data['User']['email'];
-        $password = $this->request->data['User']['password'];
-
-       
-        $user = $this->User->find('first', array(
-            'conditions' => array(
-                'User.email' => $email
-            )
-        ));
-
-        if ($user) {
-          
-            $hashedEnteredPassword = AuthComponent::password($password);
-
-            
-            echo "Hashed Password (Entered): $hashedEnteredPassword <br>";
-            echo "Hashed Password (Stored): {$user['User']['password']} <br>";
-
-          
-            if ($hashedEnteredPassword === $user['User']['password']) {
-               
-                echo 'Passwords match!';
-               
-                if ($this->Auth->login($user['User'])) {
-                    return $this->redirect($this->Auth->redirectUrl());
-                }
-            } else {
-              
-                echo 'Passwords do not match.';
-                $this->Flash->error(__('Invalid username or password, try again'));
-            }
-        } else {
-          
-            echo 'User not found.';
-            $this->Flash->error(__('Invalid username or password, try again'));
-        }
+    public function logout() {
+        $this->Session->destroy(); 
+    
+        return $this->redirect(array('controller' => 'users', 'action' => 'login'));
     }
     
-    $this->render('login');
-}
 
-
+    public function login() {
+        if ($this->request->is('post')) {
+            $email = $this->request->data['User']['email'];
+            $password = $this->request->data['User']['password'];
+    
+            $user = $this->User->find('first', array(
+                'conditions' => array(
+                    'User.email' => $email
+                )
+            ));
+    
+            if ($user) {
+                $hashedEnteredPassword = AuthComponent::password($password);
+                if ($hashedEnteredPassword === $user['User']['password']) {
+                    if ($this->Auth->login($user['User'])) {
+                        return $this->redirect($this->Auth->redirect());
+                    } else {
+                        $this->Session->setFlash('Something went wrong.', 'default', array(), 'auth');
+                    }
+                } else {
+                    $this->Session->setFlash('Incorrect password.', 'default', array(), 'auth');
+                }
+            } else {
+                $this->Session->setFlash('Invalid username or password, try again.', 'default', array(), 'auth');
+            }
+        }
+    }
     
     
     
     
     public function register() {
         if ($this->request->is('post')) {
-            $this->User->create(); 
-            $this->User->set($this->request->data);
-            
-            if ($this->User->validates()) {
-               
-                if ($this->User->save($this->request->data)) {
-                    $this->Flash->success(__('User registered successfully.'));
-                    return $this->redirect(['action' => 'thankyou']);
-                } else {
-                    $this->Flash->error(__('The user could not be saved. Please, try again.'));
-                }
+            $this->User->create();
+            if ($this->User->save($this->request->data)) {
+                return $this->redirect(array('action' => 'thankyou'));
             } else {
-              
-                $this->Flash->error(__('Please fix the errors below.'));
+               
                 $this->set('errors', $this->User->validationErrors);
             }
         }
-        $this->render('register');
+        $this->set('title_for_layout', __('User Registration'));
     }
     
 	public function thankyou() {

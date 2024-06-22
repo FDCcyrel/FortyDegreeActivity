@@ -233,8 +233,7 @@
 /**
  * A random string used in security hashing methods.
  */
-	$randomSalt = bin2hex(random_bytes(32));
-	Configure::write('Security.salt', $randomSalt);
+	Configure::write('Security.salt', 'cyrelcamson');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
