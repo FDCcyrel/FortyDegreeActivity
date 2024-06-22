@@ -19,7 +19,7 @@
         endif;
         ?>
 
-        <h1>Welcome to the Message Board</h1>
+        <h1>Welcome to the Message Board GWAPO</h1>
         <p class="lead">Please log in or register to continue.</p>
         <div>
         <a href="<?php echo $this->Html->url(array('controller' => 'Users', 'action' => 'loginview')); ?>" class="btn btn-primary btn-lg btn-custom">Log In</a>
