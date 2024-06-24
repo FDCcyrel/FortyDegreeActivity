@@ -10,6 +10,7 @@
                        echo '<div id="validation-messages" class="alert alert-danger">';
                        echo '<ul>'; 
                     echo $this->Session->flash('auth'); 
+                    echo $this->Session->flash();
                     echo '</ul>';
                     echo '</div>';
                     ?>
