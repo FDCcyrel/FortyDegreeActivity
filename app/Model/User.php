@@ -49,7 +49,7 @@ public $useTable = 'users';
 			'notBlank' => array(
 				'rule' => array('notBlank'),
 				'message' => 'Password cannot be blank',
-				'required' => true, 
+				'required' => false, 
 				//'on' => 'create', 
 				),
 			 ),
@@ -57,7 +57,7 @@ public $useTable = 'users';
 			'notBlank' => array(
 				'rule' => array('notBlank'),
 				'message' => 'Confirm Password cannot be blank',
-				'required' => true
+				'required' => false
 			),
 			'comparePasswords' => array(
 				'rule' => array('comparePasswords', 'password'),
@@ -106,4 +106,15 @@ public $useTable = 'users';
 	
 	
 	
+	public $hasMany = array(
+        'SentMessage' => array(
+            'className' => 'Message',
+            'foreignKey' => 'sender_id'
+        ),
+        'ReceivedMessage' => array(
+            'className' => 'Message',
+            'foreignKey' => 'receiver_id'
+        )
+    );
+
 }

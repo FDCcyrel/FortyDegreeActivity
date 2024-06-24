@@ -13,11 +13,16 @@
     <?php echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'); ?>
     <?php echo $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'); ?>
     
+    <?php echo $this->Html->script('https://code.jquery.com/jquery-3.6.0.min.js'); ?>
+    <?php echo $this->Html->script('https://code.jquery.com/ui/1.13.0/jquery-ui.min.js'); ?>
+    <?php echo $this->Html->css('https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css'); ?>
+
+    
 </head>
 <body>
     <div class="container">
        
-        <?php echo $this->Session->flash(); ?>
+       
 
         
         <?php echo $this->fetch('error-message'); ?>
