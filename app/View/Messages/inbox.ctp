@@ -1,5 +1,3 @@
-<!-- app/View/Messages/inbox.ctp -->
-
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-6">
@@ -10,63 +8,46 @@
         </div>
     </div>
 
-    <!-- Search Bar
-    <div class="row mb-3">
-        <div class="col-md-6">
-            <?php
-                echo $this->Form->create(null, array('role' => 'form', 'class' => 'form-inline'));
-                echo $this->Form->input('search', array(
-                    'div' => false,
-                    'label' => false,
-                    'placeholder' => 'Search messages...',
-                    'class' => 'form-control mr-sm-2',
-                    'id' => 'search-input'
-                ));
-                echo $this->Form->button('Search', array('type' => 'submit', 'class' => 'btn btn-outline-primary my-2 my-sm-0'));
-                echo $this->Form->end();
-            ?>
-        </div>
-    </div> -->
-
     <div class="row">
         <div class="col-md-12">
-            <!-- Display messages -->
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>From</th>
-                        <th>Message</th>
                         <th>Date</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($messages as $message): ?>
+                    <?php if (!empty($latestMessages)): ?>
+                        <?php foreach ($latestMessages as $latestMessage): ?>
+                            <tr>
+                                <td><?php echo $latestMessage['Sender']['name']; ?></td>
+                                <td><?php echo $latestMessage['Message']['date_created']; ?></td>
+                                <td>
+                                    <?php echo $this->Html->link('View', array('controller' => 'messages', 'action' => 'view', $latestMessage['Message']['sender_id']), array('class' => 'btn btn-sm btn-primary')); ?>
+                                    <?php echo $this->Html->link('Delete', array('controller' => 'messages', 'action' => 'delete', $latestMessage['Message']['id']), array('class' => 'btn btn-sm btn-danger', 'confirm' => 'Are you sure you want to delete this message?')); ?>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php else: ?>
                         <tr>
-                            <td><?php echo $message['Sender']['name']; ?></td>
-
-                            <td><?php echo $message['Message']['messages']; ?></td>
-                            <td><?php echo $message['Message']['date_created']; ?></td>
-                            <td>
-                                <?php echo $this->Html->link('View', array('controller' => 'messages', 'action' => 'view', $message['Message']['id']), array('class' => 'btn btn-sm btn-primary')); ?>
-                                <?php echo $this->Html->link('Delete', array('controller' => 'messages', 'action' => 'delete', $message['Message']['id']), array('class' => 'btn btn-sm btn-danger', 'confirm' => 'Are you sure you want to delete this message?')); ?>
-                            </td>
+                            <td colspan="3">No messages found.</td>
                         </tr>
-                    <?php endforeach; ?>
+                    <?php endif; ?>
                 </tbody>
             </table>
-            <!-- Pagination -->
-            <div class="text-center">
-                <?php
-                    echo $this->Paginator->prev('« Previous', null, null, array('class' => 'disabled'));
-                    echo $this->Paginator->numbers();
-                    echo $this->Paginator->next('Next »', null, null, array('class' => 'disabled'));
-                ?>
-            </div>
         </div>
     </div>
-</div>
 
+    <div class="text-center">
+        <?php
+            echo $this->Paginator->prev('« Previous', null, null, array('class' => 'disabled'));
+            echo $this->Paginator->numbers();
+            echo $this->Paginator->next('Next »', null, null, array('class' => 'disabled'));
+        ?>
+    </div> 
+</div>
 
 <script type="text/javascript">
     $(document).ready(function() {

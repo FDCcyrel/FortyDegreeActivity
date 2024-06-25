@@ -11,7 +11,7 @@
         )); ?>
     </div>
     <div class="form-group">
-        <!-- Message Input -->
+  
         <?php echo $this->Form->input('messages', array('label' => 'Message', 'rows' => '5', 'class' => 'form-control')); ?>
     </div>
     <?php echo $this->Form->submit('Send', array('class' => 'btn btn-primary')); ?>
