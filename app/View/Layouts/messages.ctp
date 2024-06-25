@@ -34,13 +34,16 @@
 </head>
 <body>
     <div class="container">
+        
         <div class="row">
             <nav class="navbar navbar-expand-lg navbar-light bg-light col-md-6">
                 <a class="navbar-brand" href="#">Message List</a>
+                
             </nav>
             <div class="col-md-6 text-right">
                 <p>
-                    <?php echo $this->Html->link('Logout', ['controller' => 'users', 'action' => 'logout'], ['class' => 'nav-link']); ?>
+                <?php echo $this->Html->link('Back', ['controller' => 'users', 'action' => 'first'], ['class' => 'btn btn-secondary']); ?>
+                    <?php echo $this->Html->link('Logout', ['controller' => 'users', 'action' => 'logout'], ['class' => 'btn btn-danger']); ?>
                 </p>
             </div>
         </div>
