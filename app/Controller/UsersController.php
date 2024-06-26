@@ -7,7 +7,8 @@ App::uses('AuthComponent', 'Controller/Component');
 class UsersController extends AppController {
     public $uses = array('User'); 
 	public $layout = 'new_layout';
-    
+    public $components = array('Session');
+
 
     public function first()
     {
@@ -118,7 +119,7 @@ public function search() {
                 $uploadPath = WWW_ROOT . 'img' . DS . 'uploads' . DS . $filename;
     
                 if (move_uploaded_file($file['tmp_name'], $uploadPath)) {
-                    // File upload successful, save file path to database
+                 
                     $this->request->data['User']['photo_path'] = 'uploads/' . $filename;
                 } else {
                     // File upload failed
@@ -132,6 +133,7 @@ public function search() {
                 $this->Session->setFlash(__('Your profile has been updated.'));
                 return $this->redirect(['action' => 'view_profile']);
             } else {
+                $this->set('errors', $this->User->validationErrors);
                 $this->Session->setFlash(__('Unable to update your profile. Please, try again.'));
             }
         } else {
@@ -143,6 +145,13 @@ public function search() {
         }
     }
     
+    
+    
+    
+    
+    
+
+
 	
 	
 	
