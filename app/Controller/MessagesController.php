@@ -9,39 +9,58 @@ class MessagesController extends AppController {
 
     public function inbox() {
         $currentUser = $this->Auth->user();
+        $myid = $currentUser['id'];
         
-      
-        $interactedSenders = $this->Message->find('all', array(
+        
+        $interactedPartners = $this->Message->find('all', array(
             'conditions' => array(
-                'Message.receiver_id' => $currentUser['id']
+                'OR' => array(
+                    array('Message.sender_id' => $myid),
+                    array('Message.receiver_id' => $myid)
+                )
             ),
-            'fields' => array('DISTINCT Message.sender_id'),
+            'fields' => array('DISTINCT Message.sender_id', 'Message.receiver_id'),
             'recursive' => -1
         ));
-        
-     
-        // Extract all unique sender IDs
-        $senderIds = Hash::extract($interactedSenders, '{n}.Message.sender_id');
-        
-        // Fetch the latest message for each sender
+    
         $latestMessages = array();
-        
-        foreach ($senderIds as $senderId) {
-           
+        $processedPairs = array(); 
+    
+        foreach ($interactedPartners as $partner) {
+            $senderId = $partner['Message']['sender_id'];
+            $receiverId = $partner['Message']['receiver_id'];
+            
+         
+            if ($senderId > $receiverId) {
+                list($senderId, $receiverId) = array($receiverId, $senderId);
+            }
+            
+            
+            $pairKey = $senderId . '_' . $receiverId;
+    
+            
+            if (in_array($pairKey, $processedPairs)) {
+                continue; 
+            }
+    
+            // Mark this pair as processed
+            $processedPairs[] = $pairKey;
+    
+            // Define conditions to fetch the latest message between current user and the partner
             $conditions = array(
                 'OR' => array(
-                    array('AND' => array(
+                    array(
                         'Message.sender_id' => $senderId,
-                        'Message.receiver_id' => $currentUser['id']
-                    )),
-                    array('AND' => array(
-                        'Message.sender_id' => $currentUser['id'],
+                        'Message.receiver_id' => $receiverId
+                    ),
+                    array(
+                        'Message.sender_id' => $receiverId,
                         'Message.receiver_id' => $senderId
-                    ))
+                    )
                 )
             );
-          
-          
+    
+            // Fetch the latest message based on conditions
             $latestMessage = $this->Message->find('first', array(
                 'conditions' => $conditions,
                 'order' => array(
@@ -53,15 +72,18 @@ class MessagesController extends AppController {
                     )
                 )
             ));
-            
-          
-            if ($latestMessage && $latestMessage['Message']['sender_id'] === $senderId) {
+    
+           
+            if ($latestMessage) {
                 $latestMessages[] = $latestMessage;
             }
         }
-        
-      
-        $this->set('latestMessages', $latestMessages);
+    
+        // Set data to pass to the view
+        $this->set(array(
+            'latestMessages' => $latestMessages,
+            'myid' => $myid
+        ));
     }
     
     
@@ -69,16 +91,10 @@ class MessagesController extends AppController {
     
     
     
-    
-    
-    
-    
-    
-   
-    public function view($id = null) {
-        $sender_id = $id;
+    public function view($sender_id  = null, $receiver_id = null) {
+       
         $currentUser = $this->Auth->user();
-        $myid = $this->Auth->user('id');
+        $myid = $currentUser['id'];
         $offset = isset($this->request->query['offset']) ? (int)$this->request->query['offset'] : 0;
         $last_id = isset($this->request->query['last_id']) ? (int)$this->request->query['last_id'] : 0;
         
@@ -86,12 +102,16 @@ class MessagesController extends AppController {
     
         $conditions = array(
             'OR' => array(
-                'Message.sender_id' => $currentUser['id'],
-                'Message.receiver_id' => $currentUser['id']
+                array(
+                    'Message.sender_id' => $sender_id,
+                    'Message.receiver_id' => $receiver_id
+                ),
+                array(
+                    'Message.sender_id' => $receiver_id,
+                    'Message.receiver_id' => $sender_id
+                )
             )
         );
-    
-       
         if ($last_id > 0) {
             $conditions['Message.id <'] = $last_id;
         }
@@ -113,17 +133,17 @@ class MessagesController extends AppController {
                 )
             ));
     
-            // Prepare the response array
+           
             $response = array(
                 'success' => true,
                 'messages' => $messages
             );
     
-            // Set response type and content
+          
             $this->response->body(json_encode($response));
             $this->response->type('json');
     
-            // Return the JSON response
+            
             return $this->response;
         } else {
             $this->paginate = array(
@@ -138,7 +158,7 @@ class MessagesController extends AppController {
     
             $messages = $this->paginate('Message');
     
-            $this->set(compact('messages', 'sender_id', 'myid', 'offset')); // Pass variables to view
+            $this->set(compact('messages', 'myid','sender_id','receiver_id','offset')); 
         }
     }
     
@@ -198,16 +218,27 @@ class MessagesController extends AppController {
         if ($this->request->is('ajax')) {
             $replyMessage = $this->request->data['message']; 
             $receiverId = $this->request->data['receiver_id']; 
-            $senderId = $this->Auth->user('id'); 
+            $senderId = $this->request->data['sender_id']; 
     
-           
-            $this->Message->create();
-            $saved = $this->Message->save(array(
+            if($this->Auth->user('id') == $senderId) {
+                $this->Message->create();
+                $saved = $this->Message->save(array(
                 'sender_id' => $senderId,
                 'receiver_id' => $receiverId,
                 'messages' => $replyMessage,
              
             ));
+            }
+            else
+            {
+                $this->Message->create();
+                $saved = $this->Message->save(array(
+                'sender_id' => $receiverId,
+                'receiver_id' => $senderId,
+                'messages' => $replyMessage,
+            ));
+            }
+
     
             if ($saved) {
                 $messageId = $this->Message->id;

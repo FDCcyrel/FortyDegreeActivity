@@ -10,33 +10,44 @@
 
     <div class="row">
         <div class="col-md-12">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>From</th>
-                        <th>Date</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if (!empty($latestMessages)): ?>
-                        <?php foreach ($latestMessages as $latestMessage): ?>
-                            <tr>
-                                <td><?php echo $latestMessage['Sender']['name']; ?></td>
-                                <td><?php echo $latestMessage['Message']['date_created']; ?></td>
-                                <td>
-                                    <?php echo $this->Html->link('View', array('controller' => 'messages', 'action' => 'view', $latestMessage['Message']['sender_id']), array('class' => 'btn btn-sm btn-primary')); ?>
-                                    <?php echo $this->Html->link('Delete', array('controller' => 'messages', 'action' => 'delete', $latestMessage['Message']['id']), array('class' => 'btn btn-sm btn-danger', 'confirm' => 'Are you sure you want to delete this message?')); ?>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                    <?php else: ?>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>From</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php if (!empty($latestMessages)): ?>
+                    <?php foreach ($latestMessages as $latestMessage): ?>
+                    
                         <tr>
-                            <td colspan="3">No messages found.</td>
+                            <td>
+                                <?php
+                                if ($latestMessage['Message']['sender_id'] == $myid) {
+                                    echo 'Me';
+                                } else {
+                                    echo h($latestMessage['Sender']['name']); // Assuming 'h()' is used for HTML escaping if needed
+                                }
+                                ?>
+                            </td>
+                            <td><?php echo $latestMessage['Message']['date_created']; ?></td>
+                            <td>
+                                <?php echo $this->Html->link('View', array('controller' => 'messages', 'action' => 'view', $latestMessage['Message']['sender_id'],$latestMessage['Message']['receiver_id']), array('class' => 'btn btn-sm btn-primary')); ?>
+                                <?php echo $this->Html->link('Delete', array('controller' => 'messages', 'action' => 'delete', $latestMessage['Message']['sender_id'],$latestMessage['Message']['receiver_id']), array('class' => 'btn btn-sm btn-danger', 'confirm' => 'Are you sure you want to delete this message?')); ?>
+                            </td>
                         </tr>
-                    <?php endif; ?>
-                </tbody>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="3">No messages found.</td>
+                    </tr>
+                <?php endif; ?>
+            </tbody>
+
             </table>
+
         </div>
     </div>
 

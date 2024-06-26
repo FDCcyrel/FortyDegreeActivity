@@ -9,7 +9,8 @@
         <div class="col-md-12">
 
             <form id="reply-form" class="text-right">
-                <input type="hidden" id="receiver-id" name="receiver_id" value="<?php echo $sender_id; ?>">
+                <input type="hidden" id="receiver-id" name="receiver_id" value="<?php echo $receiver_id; ?>">
+                <input type="hidden" id="sender-id" name="sender_id" value="<?php echo $sender_id; ?>">
                 <div class="form-group">
                     <label for="reply-message">Reply Message</label>
                     <textarea class="form-control" id="reply-message" name="message" rows="3"></textarea>
@@ -94,14 +95,16 @@
         $('#reply-form').on('submit', function(e) {
             e.preventDefault();
             var replyMessage = $('#reply-message').val();
-            var receiverId = $('#receiver-id').val(); // Get receiver_id from the hidden input field
-
+            var receiverId = $('#receiver-id').val(); 
+            var senderId = $('#sender-id').val();
+         
             $.ajax({
                 type: 'POST',
                 url: '<?php echo $this->Html->url(array('controller' => 'messages', 'action' => 'replyMessage')); ?>',
                 data: {
                     message: replyMessage,
-                    receiver_id: receiverId
+                    receiver_id: receiverId,
+                    sender_id:senderId
                 },
                 dataType: 'json',
                 success: function(response) {
