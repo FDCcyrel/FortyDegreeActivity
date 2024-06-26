@@ -1,4 +1,4 @@
-<!-- app/View/User/edit.ctp -->
+
 
 <div class="container">
 <div class="row">
@@ -11,6 +11,19 @@
                     </p>
                 </div>
             </div>
+            <?php
+    if (!empty($errors)) {
+        echo '<div id="validation-messages" class="alert alert-danger">';
+        echo '<ul>';
+        foreach ($errors as $field => $error) {
+            foreach ($error as $errMsg) {
+                echo '<li>' . $errMsg . '</li>';
+            }
+        }
+        echo '</ul>';
+        echo '</div>';
+    }
+    ?>
     
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -31,7 +44,7 @@
 
             
             <?php
-                // Display photo upload field
+               
                 echo $this->Form->input('photo_path', [
                     'label' => 'Photo (JPEG, GIF, PNG)',
                     'type' => 'file',
@@ -55,25 +68,26 @@
                     'required' => true
                 ]);
 
-                // Display birthday field with datepicker
+               
                 echo $this->Form->input('birthday', [
                     'label' => 'Birthday',
-                    'class' => 'form-control datepicker', // Apply datepicker class
+                    'class' => 'form-control datepicker',
                     'type' => 'text',
                     'autocomplete' => 'off',
-                    'value' => isset($profile['User']['birthday']) ? date('Y-m-d', strtotime($profile['User']['birthday'])) : '', // Format date if already set
-                    'data-date-format' => 'yyyy-mm-dd', // Set the date format
-                    'readonly' => true // Prevent manual typing, use datepicker instead
+                    'value' => isset($profile['User']['birthday']) ? date('Y-m-d', strtotime($profile['User']['birthday'])) : '', 
+                    'data-date-format' => 'yyyy-mm-dd', 
+                    'readonly' => true,
+                    'required' => true
                 ]);
                 
-                // Display email field
+             
                 echo $this->Form->input('email', [
                     'label' => 'Email',
                     'class' => 'form-control',
-                    'required' => true // Adjust as per your validation rules
+                    'required' => true 
                 ]);
 
-                // Display gender field (radio buttons)
+                
                 echo '<div class="form-group">';
                 echo '<div class="col-md-10">';
                 echo $this->Form->radio('gender', [
@@ -81,24 +95,43 @@
                     '2' => 'Female'
                 ], [
                     'div' => false,
-                    'label' => ['class' => 'radio-inline mr-3']
+                    'label' => ['class' => 'radio-inline mr-3'],
+                    'required' => true
                 ]);
                 echo '</div>';
                 echo '</div>';
 
-                // Display hobby field (textarea)
+               
                 echo $this->Form->input('hobby', [
                     'label' => 'Hobby',
                     'class' => 'form-control',
                     'required' => true,
-                    'type' => 'textarea', // Use textarea for long text
-                    'rows' => 5 // Adjust rows as needed
+                    'type' => 'textarea', 
+                    'rows' => 5 
                 ]);
 
-                // Hidden input for user ID
+                echo $this->Form->input('password', [
+                    'label' => 'Password',
+                    'type' => 'password',
+                    'class' => 'form-control',
+                    'autocomplete' => 'new-password', 
+                    'value' => ''
+                ]);
+                
+                echo $this->Form->input('confirm_password', [
+                    'label' => 'Confirm Password',
+                    'type' => 'password',
+                    'class' => 'form-control',
+                    'autocomplete' => 'new-password', 
+                  
+                    'value' => ''
+                ]);
+                
+                
+               
                 echo $this->Form->hidden('id');
                 
-                // Submit button and cancel link
+               
                 echo $this->Form->submit('Submit', ['class' => 'btn btn-primary']);
                 echo $this->Html->link('Cancel', ['controller' => 'users', 'action' => 'view_profile'], ['class' => 'btn btn-default']);
 
@@ -109,7 +142,7 @@
 </div>
 
 <script>
-    // JavaScript function for previewing selected file
+    
     function previewFile() {
         var preview = document.getElementById('imagePreview');
         var file = document.querySelector('input[type=file]').files[0];
@@ -130,14 +163,14 @@
         }
     }
     
-    // Datepicker initialization
+    
     $(document).ready(function() {
         $('.datepicker').datepicker({
-            dateFormat: 'yy-mm-dd', // Set the date format
-            changeYear: true, // Allow changing the year
-            changeMonth: true, // Allow changing the month
-            yearRange: '-100:+0', // Optional: Adjust the range as per your requirement
-            showButtonPanel: true // Optional: Show button panel for easy navigation
+            dateFormat: 'yy-mm-dd', 
+            changeYear: true, 
+            changeMonth: true,
+            yearRange: '-100:+0', 
+            showButtonPanel: true 
         });
     });
 </script>
