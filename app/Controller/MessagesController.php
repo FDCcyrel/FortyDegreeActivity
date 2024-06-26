@@ -121,7 +121,23 @@ class MessagesController extends AppController {
         if ($this->request->is('ajax')) {
             $this->autoRender = false;
             $this->layout = false;
-    
+            $send = isset($this->request->query['sender_id']) ? (int)$this->request->query['sender_id'] : 0;
+            $receive = isset($this->request->query['receiver_id']) ? (int)$this->request->query['receiver_id'] : 0;
+            $conditions = array(
+                'OR' => array(
+                    array(
+                        'Message.sender_id' => $send,
+                        'Message.receiver_id' => $receive
+                    ),
+                    array(
+                        'Message.sender_id' => $receive,
+                        'Message.receiver_id' => $send
+                    )
+                )
+            );
+            if ($last_id > 0) {
+                $conditions['Message.id <'] = $last_id;
+            }
             // Fetch messages based on conditions, offset, and limit
             $messages = $this->Message->find('all', array(
                 'conditions' => $conditions,
@@ -136,7 +152,8 @@ class MessagesController extends AppController {
            
             $response = array(
                 'success' => true,
-                'messages' => $messages
+                'messages' => $messages,
+                'myid'=>$myid
             );
     
           
@@ -146,6 +163,21 @@ class MessagesController extends AppController {
             
             return $this->response;
         } else {
+            $conditions = array(
+                'OR' => array(
+                    array(
+                        'Message.sender_id' => $sender_id,
+                        'Message.receiver_id' => $receiver_id
+                    ),
+                    array(
+                        'Message.sender_id' => $receiver_id,
+                        'Message.receiver_id' => $sender_id
+                    )
+                )
+            );
+            if ($last_id > 0) {
+                $conditions['Message.id <'] = $last_id;
+            }
             $this->paginate = array(
                 'conditions' => $conditions,
                 'limit' => $limit,

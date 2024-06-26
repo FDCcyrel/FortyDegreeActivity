@@ -34,7 +34,7 @@ class UsersController extends AppController {
         }
     }
     
-    // UsersController.php
+   
 
 public function search() {
     $this->autoRender = false; 
