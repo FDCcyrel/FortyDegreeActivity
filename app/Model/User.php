@@ -64,6 +64,16 @@ public $useTable = 'users';
 				'message' => 'Passwords do not match'
 			)
 		),
+				'birthday' => array(
+				'rule' => 'notBlank', 
+				'message' => 'Please enter your birthday.'
+			),
+			'gender' => array(
+			'required' => array(
+				'rule' => array('inList', array('1', '2')),
+				'message' => 'Please select your gender.'
+			)
+			),
 
 
 	);
