@@ -139,30 +139,35 @@
 
         var nextLastId = parseInt($(this).data('last-id'));
         var nextOffset = parseInt($(this).data('offset'));
-
+              var receiverId =<?php echo $receiver_id; ?> ; 
+              var senderId = <?php echo $sender_id; ?>;
+           
         $.ajax({
             type: 'GET',
             url: '<?php echo $this->Html->url(['controller' => 'messages', 'action' => 'view']); ?>',
             data: {
                 last_id: nextLastId,
-                offset: nextOffset
+                offset: nextOffset,
+                sender_id: senderId,
+                receiver_id: receiverId
             },
             dataType: 'json',
             success: function(response) {
                 console.log('Success:', response);
-
+              
+              
                 if (response.messages.length > 0) {
                     response.messages.forEach(function(item) {
                         var message = item.Message;
                         var sender = item.Sender;
+                        var messageHtml = '<div class="message-item ' + (message.sender_id == response.myid ? 'text-right' : 'text-left') + '" id="message-' + message.id + '">' +
+                        '<strong>' + (message.sender_id == response.myid ? 'To Me' : (sender.name ? 'From: ' + sender.name : 'Unknown')) + '</strong><br>' +
+                        '<span>' + message.messages + '</span><br>' +
+                        '<small>Date: ' + message.date_created + '</small><br>' +
+                        '<a href="#" class="delete-message-btn btn btn-danger" data-message-id="' + message.id + '">Delete</a><br>' +
+                        '<hr>' +
+                    '</div>';
 
-                        var messageHtml = '<div class="message-item ' + (message.sender_id == <?php echo $myid; ?> ? 'text-right' : 'text-left') + '" id="message-' + message.id + '">' +
-                            '<strong>' + (sender.name ? 'From: ' + sender.name : 'Unknown') + '</strong><br>' +
-                            '<span>' + message.messages + '</span><br>' +
-                            '<small>Date: ' + message.date_created + '</small><br>' +
-                            '<a href="#" class="delete-message-btn btn btn-danger" data-message-id="' + message.id + '">Delete</a><br>' +
-                            '<hr>' +
-                            '</div>';
 
                         $('#message-list').append(messageHtml); // Append new message to the end of the list
 
