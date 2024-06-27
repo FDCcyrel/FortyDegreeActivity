@@ -6,7 +6,7 @@
            <h2>User Profile</h2>
         </div>
         <div class="col-md-6 text-right">
-        <p>
+            <p>
                 <?php echo $this->Html->link('Logout', ['controller' => 'users', 'action' => 'logout'], ['class' => 'nav-link']); ?>
             </p>
         </div>
@@ -58,15 +58,33 @@
                 </tr>
                 <tr>
                     <th>Hobby</th>
-                    <td><?php echo isset($user['User']['hobby']) ? h($user['User']['hobby']) : ''; ?></td>
+                    <td>
+                        <div class="scrollable-textbox" style="height: 150px; width: 300px;">
+                            <?php
+                            if (isset($user['User']['hobby'])) {
+                                $hobbyLines = explode("\n", $user['User']['hobby']);
+                                foreach ($hobbyLines as $line) {
+                                    echo '<p>' . nl2br(h(trim($line))) . '</p>';
+                                }
+                            }
+                            ?>
+                        </div>
+                    </td>
                 </tr>
             </table>
         </div>
     </div>
 
     <p>
-        <?php echo $this->Html->link('Edit Profile', ['controller' => 'users', 'action' => 'edit', $user['User']['id']], ['class' => 'btn btn-primary']); ?>
         <?php echo $this->Html->link('Back', ['controller' => 'users', 'action' => 'first'], ['class' => 'btn btn-default']); ?>
     </p>
 
 </div>
+
+<style>
+    .scrollable-textbox {
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+</style>

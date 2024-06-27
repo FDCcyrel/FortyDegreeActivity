@@ -80,12 +80,6 @@
                     'required' => true
                 ]);
                 
-             
-                echo $this->Form->input('email', [
-                    'label' => 'Email',
-                    'class' => 'form-control',
-                    'required' => true 
-                ]);
 
                 
                 echo '<div class="form-group">';
@@ -110,22 +104,6 @@
                     'rows' => 5 
                 ]);
 
-                echo $this->Form->input('password', [
-                    'label' => 'Password',
-                    'type' => 'password',
-                    'class' => 'form-control',
-                    'autocomplete' => 'new-password', 
-                    'value' => ''
-                ]);
-                
-                echo $this->Form->input('confirm_password', [
-                    'label' => 'Confirm Password',
-                    'type' => 'password',
-                    'class' => 'form-control',
-                    'autocomplete' => 'new-password', 
-                  
-                    'value' => ''
-                ]);
                 
                 
                

@@ -33,12 +33,12 @@ public $useTable = 'users';
                 'rule' => array('email'),
                 'message' => 'Please enter a valid email address',
                 'allowEmpty' => false,
-                'required' => true,
+                'required' => false,
             ),
             'notBlank' => array(
                 'rule' => 'notBlank',
                 'message' => 'Email cannot be blank',
-                'required' => true,
+                'required' => false,
             ),
             'unique' => array(
                 'rule' => 'isUnique',
@@ -74,6 +74,24 @@ public $useTable = 'users';
 				'message' => 'Please select your gender.'
 			)
 			),
+			'new_password' => array(
+				'minLength' => array(
+					'rule' => array('minLength', 6),
+					'message' => 'Password must be at least 6 characters long'
+				)
+			),
+			'confirm_passwords' => array(
+				'notBlank' => array(
+					'rule' => 'notBlank',
+					'message' => 'Confirm password cannot be blank',
+					'required' => false,
+					'on'=>'change_password'
+				),
+				'comparePasswords' => array(
+					'rule' => array('comparePasswords', 'new_password'),
+					'message' => 'Passwords do not match'
+				)
+		),
 
 
 	);

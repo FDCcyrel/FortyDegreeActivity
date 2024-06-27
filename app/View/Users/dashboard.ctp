@@ -14,10 +14,18 @@
                         <li class="nav-item">
                             <?php echo $this->Html->link('Messages', array('controller' => 'messages', 'action' => 'inbox'), array('class' => 'nav-link')); ?>
                         </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <?php echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'), array('class' => 'nav-link')); ?>
+                        <!-- Account dropdown menu -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Account
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <?php echo $this->Html->link('Edit Profile', array('controller' => 'users', 'action' => 'edit'), array('class' => 'dropdown-item')); ?>
+                                <?php echo $this->Html->link('Change Password', array('controller' => 'users', 'action' => 'change_password'), array('class' => 'dropdown-item')); ?>
+                                <?php echo $this->Html->link('Change Email', array('controller' => 'users', 'action' => 'change_email'), array('class' => 'dropdown-item')); ?>
+                                <div class="dropdown-divider"></div>
+                                <?php echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'), array('class' => 'dropdown-item')); ?>
+                            </div>
                         </li>
                     </ul>
                 </div>
