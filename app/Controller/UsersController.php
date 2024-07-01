@@ -146,13 +146,69 @@ public function search() {
     }
     
     
-    
+    public function change_password() {
+        
+        if ($this->request->is('post')) {
+        
+            $this->User->id = $this->Auth->user('id');
+            if ($this->User->exists()) {
+            
+                $this->User->set($this->request->data);
+                
+                if ($this->User->validates()) {
+                
+                    $currentPassword = $this->User->field('password');
+                    $enteredCurrentPassword = AuthComponent::password($this->request->data['User']['current_password']);
+                
+                    if ($currentPassword === $enteredCurrentPassword) {
+                        $this->User->saveField('password', $this->request->data['User']['new_password']);
+                        $this->Session->setFlash('Password changed successfully.');
+                        return $this->redirect(array('action' => 'view_profile'));
+                    } else {
+                        
+                        $this->Session->setFlash('Current password is incorrect.');
+                    }
+                } else {
+                    $this->set('errors', $this->User->validationErrors);
+                }
+            } else {
+                throw new NotFoundException(__('Invalid user'));
+            }
+        }
+    }
     
     
     
 
 
-	
+    public function change_email() {
+       
+        $userId = $this->Auth->user('id'); // Assuming 'id' is the primary key field
+        $currentUser = $this->User->findById($userId);
+    
+        if (!$currentUser) {
+            throw new NotFoundException(__('User not found'));
+        }
+    
+        // Handle form submission
+        if ($this->request->is('post') || $this->request->is('put')) {
+            // Set only the fields you want to update
+            $this->User->id = $userId; // Set the ID of the user to update
+    
+            // Only update the 'email' field
+            $this->User->saveField('email', $this->request->data['User']['email']);
+    
+            // Optionally, handle success and failure scenarios
+            if ($this->User->save($this->request->data)) {
+                $this->Session->setFlash('Email updated successfully.');
+                $this->redirect(array('action' => 'first'));
+            } else {
+                $this->Session->setFlash('Failed to update email.');
+                $this->set('errors', $this->User->validationErrors);
+            }
+        }
+    
+    }
 	
 	
 	
