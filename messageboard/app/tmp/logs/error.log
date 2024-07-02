@@ -1,0 +1,52 @@
+2024-07-01 17:40:09 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No such file or directory',
+  'enabled' => true,
+)
+Request URL: /users/login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Model/Datasource/DboSource.php(278): Mysql->connect()
+#1 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Model/Model.php(3659): ConnectionManager::getDataSource('default')
+#3 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Model/Model.php(1162): Model->setDataSource('default')
+#4 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Model/Model.php(3686): Model->setSource('users')
+#5 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#6 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/View/Helper/FormHelper.php(480): FormHelper->_introspectModel('User', 'fields')
+#8 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/app/View/Users/login.ctp(17): FormHelper->create('User', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#12 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#13 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/index.php(41): require('/Applications/X...')
+#17 {main}
+2024-07-01 17:40:09 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No such file or directory',
+  'enabled' => true,
+)
+Request URL: /users/login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Model/Datasource/DboSource.php(278): Mysql->connect()
+#1 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Model/Model.php(3659): ConnectionManager::getDataSource('default')
+#3 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Model/Model.php(1162): Model->setDataSource('default')
+#4 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Model/Model.php(3686): Model->setSource('users')
+#5 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#6 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/View/Helper/FormHelper.php(480): FormHelper->_introspectModel('User', 'fields')
+#8 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/app/View/Users/login.ctp(17): FormHelper->create('User', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/View/View.php(971): include('/Applications/X...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#12 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#13 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 /Applications/XAMPP/xamppfiles/htdocs/FortyDegreeActivity/index.php(41): require('/Applications/X...')
+#17 {main}
